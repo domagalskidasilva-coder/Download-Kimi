@@ -153,7 +153,7 @@ function getSectionColor(title: string) {
   const t = title.toLowerCase();
   if (t.includes('added') || t.includes('new')) return 'text-emerald-400 bg-emerald-400/10 border-emerald-400/20';
   if (t.includes('changed') || t.includes('updated')) return 'text-amber-400 bg-amber-400/10 border-amber-400/20';
-  if (t.includes('fixed') || t.includes('fix')) return 'text-cyan-400 bg-cyan-400/10 border-cyan-400/20';
+  if (t.includes('fixed') || t.includes('fix')) return 'text-amber-400 bg-amber-400/10 border-amber-400/20';
   if (t.includes('removed')) return 'text-red-400 bg-red-400/10 border-red-400/20';
   return 'text-zinc-400 bg-zinc-400/10 border-zinc-400/20';
 }
@@ -206,10 +206,10 @@ function LoadingSkeleton() {
     <div className="min-h-screen bg-[#09090b] flex items-center justify-center">
       <div className="text-center">
         <div className="relative w-16 h-16 mx-auto mb-6">
-          <div className="absolute inset-0 rounded-full border-2 border-cyan-500/20" />
-          <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-cyan-500 animate-spin" />
+          <div className="absolute inset-0 rounded-full border-2 border-amber-500/20" />
+          <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-amber-500 animate-spin" />
         </div>
-        <div className="text-zinc-400 text-sm font-medium tracking-wide">Loading KimiTV releases...</div>
+        <div className="text-zinc-400 text-sm font-medium tracking-wide">Loading Fable TV releases...</div>
       </div>
     </div>
   );
@@ -226,11 +226,11 @@ function ErrorState({ onRetry }: { onRetry: () => void }) {
         <p className="text-zinc-400 mb-6 leading-relaxed">
           We couldn't fetch the latest release data from GitHub. This may be due to rate limiting or a temporary network issue.
         </p>
-        <button onClick={onRetry} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-semibold transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25">
+        <button onClick={onRetry} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-semibold transition-all duration-200 hover:shadow-lg hover:shadow-amber-500/25">
           <RefreshCw className="w-4 h-4" /> Try Again
         </button>
         <div className="mt-6">
-          <a href="https://github.com/sulistta/kimitv-updates/releases" target="_blank" rel="noopener noreferrer" className="text-sm text-zinc-500 hover:text-cyan-400 transition-colors inline-flex items-center gap-1">
+          <a href="https://github.com/domagalskidasilva-coder/fable-tv/releases" target="_blank" rel="noopener noreferrer" className="text-sm text-zinc-500 hover:text-amber-400 transition-colors inline-flex items-center gap-1">
             Or visit GitHub releases directly <ExternalLink className="w-3 h-3" />
           </a>
         </div>
@@ -241,8 +241,8 @@ function ErrorState({ onRetry }: { onRetry: () => void }) {
 
 function BetaBadge() {
   return (
-    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
-      <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-amber-500/10 text-amber-400 border border-amber-500/20">
+      <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
       Beta
     </span>
   );
@@ -279,7 +279,7 @@ function DownloadButton({
       whileTap={{ scale: 0.98 }}
       className={`group inline-flex items-center gap-3 font-semibold rounded-2xl transition-all duration-300 ${
         isPrimary
-          ? 'px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-400 text-black text-lg hover:shadow-2xl hover:shadow-cyan-500/30 glow-accent'
+          ? 'px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-400 text-black text-lg hover:shadow-2xl hover:shadow-amber-500/30 glow-accent'
           : 'px-6 py-3 bg-zinc-800/80 text-zinc-200 text-sm border border-zinc-700 hover:border-zinc-600 hover:bg-zinc-700/80'
       }`}
     >
@@ -313,8 +313,8 @@ function HeroSection({
       {/* Background layers */}
       <div className="absolute inset-0 bg-grid opacity-40" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#09090b]" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-cyan-500/5 rounded-full blur-[128px]" />
-      <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-cyan-500/3 rounded-full blur-[100px]" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-amber-500/5 rounded-full blur-[128px]" />
+      <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-amber-500/3 rounded-full blur-[100px]" />
       <div className="absolute top-1/4 right-1/4 w-[300px] h-[300px] bg-purple-500/3 rounded-full blur-[80px]" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 py-32 text-center">
@@ -324,7 +324,7 @@ function HeroSection({
           </motion.div>
 
           <motion.h1 variants={fadeUp} className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight mb-6 leading-[0.9]">
-            <span className="text-gradient">Kimi</span><span className="text-gradient-accent">TV</span>
+            <span className="text-gradient">Fable</span><span className="text-gradient-accent">TV</span>
           </motion.h1>
 
           <motion.p variants={fadeUp} className="text-xl sm:text-2xl lg:text-3xl text-zinc-400 font-light mb-3 tracking-tight">
@@ -339,7 +339,7 @@ function HeroSection({
             {os === 'macos' ? (
               <div className="glass-card rounded-2xl px-8 py-4 text-center">
                 <p className="text-zinc-300 font-medium mb-1">macOS is not currently supported</p>
-                <p className="text-zinc-500 text-sm">KimiTV Beta is available for Windows, Linux, and Android</p>
+                <p className="text-zinc-500 text-sm">Fable TV Beta is available for Windows, Linux, and Android</p>
               </div>
             ) : os === 'unknown' ? (
               <>
@@ -360,7 +360,7 @@ function HeroSection({
                   <DownloadButton asset={androidAsset} os="android" variant="secondary" label="APK" />
                 )}
                 {os === 'linux' && appimage && deb && (
-                  <a href={deb.browser_download_url} className="text-sm text-zinc-500 hover:text-cyan-400 transition-colors underline underline-offset-4">
+                  <a href={deb.browser_download_url} className="text-sm text-zinc-500 hover:text-amber-400 transition-colors underline underline-offset-4">
                     Also available as .deb ({formatBytes(deb.size)})
                   </a>
                 )}
@@ -369,10 +369,10 @@ function HeroSection({
           </motion.div>
 
           <motion.div variants={fadeUp} className="flex items-center justify-center gap-6 text-sm text-zinc-500">
-            <button onClick={scrollToChangelog} className="hover:text-cyan-400 transition-colors inline-flex items-center gap-1.5 cursor-pointer">
+            <button onClick={scrollToChangelog} className="hover:text-amber-400 transition-colors inline-flex items-center gap-1.5 cursor-pointer">
               <FileDown className="w-4 h-4" /> View changelog
             </button>
-            <a href="https://github.com/sulistta/kimitv-updates" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors inline-flex items-center gap-1.5">
+            <a href="https://github.com/domagalskidasilva-coder/fable-tv" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors inline-flex items-center gap-1.5">
               <Github className="w-4 h-4" /> GitHub
             </a>
           </motion.div>
@@ -413,7 +413,7 @@ function ReleaseSpotlight({ release, os }: { release: Release | null; os: OS }) 
         className="relative z-10 max-w-5xl mx-auto"
       >
         <motion.div variants={fadeUp} className="text-center mb-16">
-          <p className="text-cyan-400 text-sm font-semibold tracking-widest uppercase mb-3">Latest Release</p>
+          <p className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-3">Latest Release</p>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-gradient">Release Spotlight</h2>
         </motion.div>
 
@@ -422,8 +422,8 @@ function ReleaseSpotlight({ release, os }: { release: Release | null; os: OS }) 
             {/* Left column */}
             <div className="flex-1">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center">
-                  <Tag className="w-6 h-6 text-cyan-400" />
+                <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center">
+                  <Tag className="w-6 h-6 text-amber-400" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white">{release.tag_name}</h3>
@@ -442,7 +442,7 @@ function ReleaseSpotlight({ release, os }: { release: Release | null; os: OS }) 
                   <p className="text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-3">Highlights</p>
                   {highlights.map((item, i) => (
                     <div key={i} className="flex items-start gap-2 text-sm text-zinc-300">
-                      <Sparkles className="w-4 h-4 text-cyan-400 mt-0.5 shrink-0" />
+                      <Sparkles className="w-4 h-4 text-amber-400 mt-0.5 shrink-0" />
                       <span>{item}</span>
                     </div>
                   ))}
@@ -453,7 +453,7 @@ function ReleaseSpotlight({ release, os }: { release: Release | null; os: OS }) 
             {/* Right column: Download cards */}
             <div className="lg:w-80 space-y-3">
               {windowsAsset && (
-                <a href={windowsAsset.browser_download_url} className="group flex items-center gap-4 p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-cyan-500/30 transition-all duration-300 hover:bg-zinc-800/60">
+                <a href={windowsAsset.browser_download_url} className="group flex items-center gap-4 p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-amber-500/30 transition-all duration-300 hover:bg-zinc-800/60">
                   <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0">
                     <Monitor className="w-5 h-5 text-blue-400" />
                   </div>
@@ -463,12 +463,12 @@ function ReleaseSpotlight({ release, os }: { release: Release | null; os: OS }) 
                   </div>
                   <div className="text-right shrink-0">
                     <p className="text-xs text-zinc-400 font-mono">{formatBytes(windowsAsset.size)}</p>
-                    <Download className="w-4 h-4 text-zinc-500 group-hover:text-cyan-400 transition-colors mt-1 ml-auto" />
+                    <Download className="w-4 h-4 text-zinc-500 group-hover:text-amber-400 transition-colors mt-1 ml-auto" />
                   </div>
                 </a>
               )}
               {linuxPrimaryAsset && (
-                <a href={linuxPrimaryAsset.browser_download_url} className="group flex items-center gap-4 p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-cyan-500/30 transition-all duration-300 hover:bg-zinc-800/60">
+                <a href={linuxPrimaryAsset.browser_download_url} className="group flex items-center gap-4 p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-amber-500/30 transition-all duration-300 hover:bg-zinc-800/60">
                   <div className={`w-10 h-10 rounded-xl border flex items-center justify-center shrink-0 ${
                     linuxPrimaryAsset.name.endsWith('.deb')
                       ? 'bg-green-500/10 border-green-500/20'
@@ -484,14 +484,14 @@ function ReleaseSpotlight({ release, os }: { release: Release | null; os: OS }) 
                   </div>
                   <div className="text-right shrink-0">
                     <p className="text-xs text-zinc-400 font-mono">{formatBytes(linuxPrimaryAsset.size)}</p>
-                    <Download className="w-4 h-4 text-zinc-500 group-hover:text-cyan-400 transition-colors mt-1 ml-auto" />
+                    <Download className="w-4 h-4 text-zinc-500 group-hover:text-amber-400 transition-colors mt-1 ml-auto" />
                   </div>
                 </a>
               )}
               {androidAsset && (
-                <a href={androidAsset.browser_download_url} className="group flex items-center gap-4 p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-cyan-500/30 transition-all duration-300 hover:bg-zinc-800/60">
-                  <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center shrink-0">
-                    <Smartphone className="w-5 h-5 text-cyan-400" />
+                <a href={androidAsset.browser_download_url} className="group flex items-center gap-4 p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-amber-500/30 transition-all duration-300 hover:bg-zinc-800/60">
+                  <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center shrink-0">
+                    <Smartphone className="w-5 h-5 text-amber-400" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-semibold text-white">Android (.apk)</p>
@@ -499,12 +499,12 @@ function ReleaseSpotlight({ release, os }: { release: Release | null; os: OS }) 
                   </div>
                   <div className="text-right shrink-0">
                     <p className="text-xs text-zinc-400 font-mono">{formatBytes(androidAsset.size)}</p>
-                    <Download className="w-4 h-4 text-zinc-500 group-hover:text-cyan-400 transition-colors mt-1 ml-auto" />
+                    <Download className="w-4 h-4 text-zinc-500 group-hover:text-amber-400 transition-colors mt-1 ml-auto" />
                   </div>
                 </a>
               )}
               {appimage && deb && !androidAsset && (
-                <a href={deb.browser_download_url} className="group flex items-center gap-4 p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-cyan-500/30 transition-all duration-300 hover:bg-zinc-800/60">
+                <a href={deb.browser_download_url} className="group flex items-center gap-4 p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-amber-500/30 transition-all duration-300 hover:bg-zinc-800/60">
                   <div className="w-10 h-10 rounded-xl bg-green-500/10 border border-green-500/20 flex items-center justify-center shrink-0">
                     <Box className="w-5 h-5 text-green-400" />
                   </div>
@@ -514,7 +514,7 @@ function ReleaseSpotlight({ release, os }: { release: Release | null; os: OS }) 
                   </div>
                   <div className="text-right shrink-0">
                     <p className="text-xs text-zinc-400 font-mono">{formatBytes(deb.size)}</p>
-                    <Download className="w-4 h-4 text-zinc-500 group-hover:text-cyan-400 transition-colors mt-1 ml-auto" />
+                    <Download className="w-4 h-4 text-zinc-500 group-hover:text-amber-400 transition-colors mt-1 ml-auto" />
                   </div>
                 </a>
               )}
@@ -539,7 +539,7 @@ function ChangelogSection({ release }: { release: Release | null }) {
         className="relative z-10 max-w-4xl mx-auto"
       >
         <motion.div variants={fadeUp} className="text-center mb-16">
-          <p className="text-cyan-400 text-sm font-semibold tracking-widest uppercase mb-3">What's New</p>
+          <p className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-3">What's New</p>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-gradient">Changelog</h2>
           <p className="text-zinc-500 mt-3 text-lg">{release.tag_name} &middot; {formatDate(release.published_at)}</p>
         </motion.div>
@@ -558,7 +558,7 @@ function ChangelogSection({ release }: { release: Release | null }) {
                 <ul className="space-y-3">
                   {section.items.map((item, j) => (
                     <li key={j} className="flex items-start gap-3 text-sm text-zinc-300 leading-relaxed">
-                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-500/60 mt-2 shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-500/60 mt-2 shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -591,7 +591,7 @@ function PreviousReleasesSection({ releases }: { releases: Release[] }) {
         className="relative z-10 max-w-4xl mx-auto"
       >
         <motion.div variants={fadeUp} className="text-center mb-16">
-          <p className="text-cyan-400 text-sm font-semibold tracking-widest uppercase mb-3">Release History</p>
+          <p className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-3">Release History</p>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-gradient">Previous Releases</h2>
         </motion.div>
 
@@ -676,8 +676,8 @@ function PreviousReleasesSection({ releases }: { releases: Release[] }) {
         </motion.div>
 
         <motion.div variants={fadeUp} className="text-center mt-8">
-          <a href="https://github.com/sulistta/kimitv-updates/releases" target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-cyan-400 transition-colors">
+          <a href="https://github.com/domagalskidasilva-coder/fable-tv/releases" target="_blank" rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-amber-400 transition-colors">
             View all releases on GitHub <ExternalLink className="w-3.5 h-3.5" />
           </a>
         </motion.div>
@@ -696,7 +696,7 @@ function InstallGuideSection() {
         className="relative z-10 max-w-5xl mx-auto"
       >
         <motion.div variants={fadeUp} className="text-center mb-16">
-          <p className="text-cyan-400 text-sm font-semibold tracking-widest uppercase mb-3">Quick Start</p>
+          <p className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-3">Quick Start</p>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-gradient">Installation Guide</h2>
         </motion.div>
 
@@ -714,16 +714,16 @@ function InstallGuideSection() {
             </div>
             <ol className="space-y-4">
               <li className="flex items-start gap-3">
-                <span className="w-6 h-6 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center text-xs font-bold text-cyan-400 shrink-0 mt-0.5">1</span>
+                <span className="w-6 h-6 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center text-xs font-bold text-amber-400 shrink-0 mt-0.5">1</span>
                 <div><p className="text-sm text-zinc-300">Download the <span className="text-white font-medium">.exe installer</span> from the latest release</p></div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="w-6 h-6 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center text-xs font-bold text-cyan-400 shrink-0 mt-0.5">2</span>
+                <span className="w-6 h-6 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center text-xs font-bold text-amber-400 shrink-0 mt-0.5">2</span>
                 <div><p className="text-sm text-zinc-300">Run the installer &mdash; Windows may show a SmartScreen warning for unsigned apps, click <span className="text-white font-medium">"More info" → "Run anyway"</span></p></div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="w-6 h-6 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center text-xs font-bold text-cyan-400 shrink-0 mt-0.5">3</span>
-                <div><p className="text-sm text-zinc-300">KimiTV will install and launch automatically. Future updates are delivered in-app.</p></div>
+                <span className="w-6 h-6 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center text-xs font-bold text-amber-400 shrink-0 mt-0.5">3</span>
+                <div><p className="text-sm text-zinc-300">Fable TV will install and launch automatically. Future updates are delivered in-app.</p></div>
               </li>
             </ol>
           </motion.div>
@@ -743,14 +743,14 @@ function InstallGuideSection() {
               <div>
                 <p className="text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-3">AppImage (recommended)</p>
                 <div className="bg-zinc-900 rounded-xl p-4 font-mono text-sm">
-                  <p className="text-zinc-400"><span className="text-cyan-400">chmod</span> +x KimiTV_*.AppImage</p>
-                  <p className="text-zinc-400"><span className="text-cyan-400">./</span>KimiTV_*.AppImage</p>
+                  <p className="text-zinc-400"><span className="text-amber-400">chmod</span> +x Fable*.AppImage</p>
+                  <p className="text-zinc-400"><span className="text-amber-400">./</span>Fable*.AppImage</p>
                 </div>
               </div>
               <div>
                 <p className="text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-3">.deb package</p>
                 <div className="bg-zinc-900 rounded-xl p-4 font-mono text-sm">
-                  <p className="text-zinc-400"><span className="text-cyan-400">sudo dpkg</span> -i KimiTV_*.deb</p>
+                  <p className="text-zinc-400"><span className="text-amber-400">sudo dpkg</span> -i Fable*.deb</p>
                 </div>
               </div>
             </div>
@@ -765,12 +765,12 @@ function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const faqs = [
     {
-      q: 'What is KimiTV Beta?',
-      a: 'KimiTV Beta is the pre-release version of the KimiTV desktop media player. It includes the latest features and improvements that are still being tested before a stable release.'
+      q: 'What is Fable TV Beta?',
+      a: 'Fable TV Beta is the pre-release version of the Fable TV desktop media player. It includes the latest features and improvements that are still being tested before a stable release.'
     },
     {
       q: 'How do updates work?',
-      a: 'KimiTV includes a built-in auto-updater. New releases are published to the GitHub repository, and the app will notify you when an update is available. You can also always download the latest version from this page.'
+      a: 'Fable TV includes a built-in auto-updater. New releases are published to the GitHub repository, and the app will notify you when an update is available. You can also always download the latest version from this page.'
     },
     {
       q: 'Is this safe to install?',
@@ -778,7 +778,7 @@ function FAQSection() {
     },
     {
       q: 'Which platforms are supported?',
-      a: 'KimiTV Beta currently supports Windows (10/11, x64), Linux (Ubuntu 22.04+, Debian-based, x64), and Android via APK downloads. macOS support is not currently available.'
+      a: 'Fable TV Beta currently supports Windows (10/11, x64), Linux (Ubuntu 22.04+, Debian-based, x64), and Android via APK downloads. macOS support is not currently available.'
     },
     {
       q: 'Where can I report issues?',
@@ -799,7 +799,7 @@ function FAQSection() {
         className="relative z-10 max-w-3xl mx-auto"
       >
         <motion.div variants={fadeUp} className="text-center mb-16">
-          <p className="text-cyan-400 text-sm font-semibold tracking-widest uppercase mb-3">FAQ</p>
+          <p className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-3">FAQ</p>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-gradient">Frequently Asked</h2>
         </motion.div>
 
@@ -833,7 +833,7 @@ function FAQSection() {
         </motion.div>
 
         <motion.div variants={fadeUp} className="mt-12 text-center">
-          <a href="https://github.com/sulistta/kimitv-updates" target="_blank" rel="noopener noreferrer"
+          <a href="https://github.com/domagalskidasilva-coder/fable-tv" target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-zinc-800/80 text-zinc-300 text-sm font-medium border border-zinc-700 hover:border-zinc-600 hover:bg-zinc-700/80 transition-all duration-200">
             <Github className="w-4 h-4" /> Visit GitHub Repository
           </a>
@@ -850,24 +850,24 @@ function Footer({ release }: { release: Release | null }) {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
             <span className="text-xl font-black tracking-tight">
-              <span className="text-white">Kimi</span><span className="text-cyan-400">TV</span>
+              <span className="text-white">Fable</span><span className="text-amber-400">TV</span>
             </span>
             {release && (
               <span className="text-xs font-mono text-zinc-600">{release.tag_name}</span>
             )}
           </div>
           <div className="flex items-center gap-6 text-sm text-zinc-500">
-            <a href="https://github.com/sulistta/kimitv-updates" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors inline-flex items-center gap-1.5">
+            <a href="https://github.com/domagalskidasilva-coder/fable-tv" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors inline-flex items-center gap-1.5">
               <Github className="w-4 h-4" /> GitHub
             </a>
-            <a href="https://github.com/sulistta/kimitv-updates/releases" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">
+            <a href="https://github.com/domagalskidasilva-coder/fable-tv/releases" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">
               Releases
             </a>
           </div>
         </div>
         <div className="mt-8 pt-6 border-t border-zinc-800/50 text-center">
           <p className="text-xs text-zinc-600">
-            &copy; {new Date().getFullYear()} KimiTV. Beta software &mdash; all releases sourced from GitHub.
+            &copy; {new Date().getFullYear()} Fable TV. Beta software &mdash; all releases sourced from GitHub.
           </p>
         </div>
       </div>
@@ -877,7 +877,7 @@ function Footer({ release }: { release: Release | null }) {
 
 // ─── MAIN PAGE ───────────────────────────────────────────
 
-export default function KimiTVPage() {
+export default function FableTVPage() {
   const [releases, setReleases] = useState<Release[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);

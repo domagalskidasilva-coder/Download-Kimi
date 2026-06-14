@@ -1,7 +1,7 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-This project is a Next.js 14 App Router app for serving KimiTV download information. Use `app/` for routes and page-level UI, including the catch-all API handler at `app/api/[[...path]]/route.ts`. Shared presentational components live in `components/ui/` and follow the shadcn/Radix pattern. Put reusable hooks in `hooks/` and small helpers in `lib/`. Backend smoke tests are in `backend_test.py`; `tests/` is available for additional Python test modules. Keep generated artifacts and ad hoc test output in `test_reports/` instead of source folders.
+This project is a Next.js 14 App Router app for serving Fable TV download information. Use `app/` for routes and page-level UI, including the catch-all API handler at `app/api/[[...path]]/route.ts`. Shared presentational components live in `components/ui/` and follow the shadcn/Radix pattern. Put reusable hooks in `hooks/` and small helpers in `lib/`. Backend smoke tests are in `backend_test.py`; `tests/` is available for additional Python test modules. Keep generated artifacts and ad hoc test output in `test_reports/` instead of source folders.
 
 ## Build, Test, and Development Commands
 - `bun run dev`: start the local dev server on port `3000`.

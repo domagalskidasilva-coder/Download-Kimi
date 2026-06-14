@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-const GITHUB_API = 'https://api.github.com/repos/sulistta/kimitv-updates/releases';
+const GITHUB_API = 'https://api.github.com/repos/domagalskidasilva-coder/fable-tv/releases';
 
 type GitHubRelease = Record<string, unknown>;
 
@@ -22,7 +22,7 @@ async function fetchReleases(): Promise<FetchReleasesResult> {
     const res = await fetch(GITHUB_API, {
       headers: {
         'Accept': 'application/vnd.github.v3+json',
-        'User-Agent': 'KimiTV-Download-Page'
+        'User-Agent': 'FableTV-Download-Page'
       },
       next: { revalidate: 300 }
     });

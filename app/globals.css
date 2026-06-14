@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --kimi-bg: #09090b;
-  --kimi-surface: #111113;
-  --kimi-surface-2: #18181b;
-  --kimi-border: #27272a;
-  --kimi-accent: #06b6d4;
-  --kimi-accent-light: #22d3ee;
-  --kimi-text: #fafafa;
-  --kimi-text-muted: #a1a1aa;
-  --kimi-text-dim: #71717a;
+  --fable-bg: #09090b;
+  --fable-surface: #111113;
+  --fable-surface-2: #18181b;
+  --fable-border: #27272a;
+  --fable-accent: #e8b65a;
+  --fable-accent-light: #f3c970;
+  --fable-text: #fafafa;
+  --fable-text-muted: #a1a1aa;
+  --fable-text-dim: #71717a;
 }
 
 @layer base {
@@ -19,13 +19,13 @@
     @apply border-[#27272a];
   }
   body {
-    background-color: var(--kimi-bg);
-    color: var(--kimi-text);
+    background-color: var(--fable-bg);
+    color: var(--fable-text);
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     overflow-x: hidden;
   }
   ::selection {
-    background-color: rgba(6, 182, 212, 0.3);
+    background-color: rgba(232, 182, 90, 0.3);
     color: #fff;
   }
   ::-webkit-scrollbar {
@@ -51,16 +51,16 @@
     border: 1px solid rgba(39, 39, 42, 0.6);
   }
   .glass-card-accent {
-    background: rgba(6, 182, 212, 0.05);
+    background: rgba(232, 182, 90, 0.05);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(6, 182, 212, 0.15);
+    border: 1px solid rgba(232, 182, 90, 0.15);
   }
   .glow-accent {
-    box-shadow: 0 0 20px rgba(6, 182, 212, 0.15), 0 0 60px rgba(6, 182, 212, 0.05);
+    box-shadow: 0 0 20px rgba(232, 182, 90, 0.15), 0 0 60px rgba(232, 182, 90, 0.05);
   }
   .glow-accent-strong {
-    box-shadow: 0 0 30px rgba(6, 182, 212, 0.25), 0 0 80px rgba(6, 182, 212, 0.1);
+    box-shadow: 0 0 30px rgba(232, 182, 90, 0.25), 0 0 80px rgba(232, 182, 90, 0.1);
   }
   .text-gradient {
     background: linear-gradient(135deg, #fafafa 0%, #a1a1aa 100%);
@@ -69,7 +69,7 @@
     background-clip: text;
   }
   .text-gradient-accent {
-    background: linear-gradient(135deg, #22d3ee 0%, #06b6d4 50%, #0891b2 100%);
+    background: linear-gradient(135deg, #f3c970 0%, #e8b65a 50%, #d8941c 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

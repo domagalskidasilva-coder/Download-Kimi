@@ -3,12 +3,12 @@ import type { ReactNode } from 'react';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'KimiTV Beta — Download for Windows & Linux',
-  description: 'Download the latest KimiTV Beta desktop app. Fast, clean media player built for binge watching. Available for Windows and Linux.',
-  keywords: 'KimiTV, desktop app, media player, Windows, Linux, download, beta',
+  title: 'Fable TV Beta — Download for Windows, Linux & Android',
+  description: 'Download the latest Fable TV Beta desktop app. Fast, clean media player built for binge watching. Available for Windows, Linux and Android.',
+  keywords: 'Fable TV, desktop app, media player, Windows, Linux, download, beta',
   openGraph: {
-    title: 'KimiTV Beta — Download for Desktop',
-    description: 'Fast. Clean. Built for binge watching. Download KimiTV Beta for Windows and Linux.',
+    title: 'Fable TV Beta — Download for Desktop',
+    description: 'Fast. Clean. Built for binge watching. Download Fable TV Beta for Windows, Linux and Android.',
     type: 'website',
   },
 };
